@@ -205,10 +205,24 @@ button:active{
     html{
         font-size: 6px;
     }
+    #addevent,
+    #viewevent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media (max-width:575px) {
     html{
         font-size: 4px;
+    }
+    #addevent,
+    #viewevent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
