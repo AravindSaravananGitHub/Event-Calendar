@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Aravind S">
+        <meta neme="description" content="This is an Project of Event Calender">
+        <title>Event Calender</title>
+        <link rel="icon" href="icon.webp" type="Image/x-icon">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <header>
+                <div class="header">
+                    <button class="back-button"><i class="fa fa-arrow-circle-o-left"></i></button>
+                    <div class="month">
+                        <p>
+                            <h3><span id="month-name"> </span><span id="year-number"></span></h3>
+                        </p>
+                    </div>
+                    <button class="forward-button"><i class="fa fa-arrow-circle-o-right"></i></button>
+                </div>
+                <div class="weekdays">
+                    <div class="week">Sun</div>
+                    <div class="week">Mon</div>
+                    <div class="week">tue</div>
+                    <div class="week">wed</div>
+                    <div class="week">thu</div>
+                    <div class="week">fri</div>
+                    <div class="week">sat</div>
+                </div>
+            </header>
+
+            <div id="calender">
+                <!--
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day" id="currentday">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25 <div class="event">Javascript Complete</div></div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30 <div class="event">Queen's Land</div></div>
+                <div class="day">31</div>
+                <div class="day plane"></div>
+                <div class="day plane"></div>
+                <div class="day plane"></div>
+                <div class="day plane"></div>
+                <div class="day plane"></div>
+                -->
+            </div>
+
+        </div>
+
+        <div id="model"></div>
+
+        <div id="addevent">
+            <h2>Add Event</h2>
+            <input type="text" id="txt-title" placeholder="Event Title">
+            <button id="btn-save">Save</button>
+            <button class="btn-close">close</button>
+        </div>
+
+        <div id="viewevent">
+            <h2>Event</h2>
+            <p id="eventText"></p>
+            <button id="btn-delete">Delete</button>
+            <button class="btn-close">close</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

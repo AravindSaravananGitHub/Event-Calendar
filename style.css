@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 7px;
+}
+:root{
+    --bgcolor:#aaa69d;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(129deg, rgba(34,193,195,1) 0%, rgba(189,128,102,1) 62%, rgba(253,187,45,1) 100%);
+    display: grid;
+    place-items: center;
+}
+.container{
+    width: 77rem;
+    background-color:#f5f6fa;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header .month{
+    display: flex;
+    color:#0984e3;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.month #year-number{
+    font-size: 1.5rem;
+    color:#34ace0;
+}
+button{
+    width: 7.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: azure;
+}
+.header button{
+    background-color: #0984e3;
+}
+.header button i{
+    color:white;
+    font-size: 3rem;
+}
+button:active{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 0.1rem 0.2rem 0px, rgba(60, 64, 67, 0.15) 0px 0.2rem 0.6rem 0.2rem;
+}
+.weekdays{
+    width: 100%;
+    display: flex;
+    font-size: 1.7rem;
+    background: rgb(52,172,224);
+    background: linear-gradient(120deg, rgba(52,172,224,1) 14%, rgba(0,254,183,1) 41%, rgba(52,148,224,1) 73%, rgba(0,212,255,1) 100%);
+    color:#f7f1e3;
+    font-weight: 500;
+}
+.weekdays .week{
+    width: 10rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#calender{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.day{
+    width:10rem;
+    height: 10rem;
+    padding: 1rem;
+    margin: .5rem;
+    box-sizing: border-box;
+    font-size: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    color: #2c2c54;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.day:hover{
+    transition: .3s ease;
+    background-color:rgb(52, 172, 224, 0.5);
+    color: black;
+}
+#currentday{
+    /*#0984e3*/
+    background: rgb(52,172,224);
+    background: linear-gradient(120deg, rgba(52,172,224,1) 14%, rgba(0,254,183,1) 41%, rgba(245,6,232,0.9808298319327731) 64%, rgba(52,172,224,1) 82%, rgba(0,212,255,1) 100%);
+    background-size: 700% 700%;
+    color:#ffffff;
+    animation: Nisha 5s ease infinite;
+}
+@keyframes Nisha {
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+.event{
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    background-color: #32ff7e;
+    border-radius: 0.5rem;
+    max-height: 4.8rem;
+    overflow: hidden;
+    color:#1B1464;
+}
+.holiday{
+    font-size: 1.4rem;
+    background-color: #EA2027;
+    max-height: 4rem;
+    color: #f7f1e3;
+    padding: 0.3rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.plane{
+    cursor: pointer;
+    box-shadow: none;
+}
+.plane:hover{
+    background-color: #f5f6fa;
+}
+#model{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+}
+#addevent,
+#viewevent{
+    display: none;
+    width:40rem;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    padding: 3rem;
+}
+#addevent h2,
+#viewevent h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+#txt-title{
+    padding: 1rem;
+    width:100%;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 1px solid #cbd4c2;
+    font-size: 1.6rem;
+}
+#btn-save{
+    color: white;
+    background-color: #32ff7e;
+    font-size: 1.6rem;
+}
+.btn-close{
+    color: white;
+    background-color: #ff9f1a;
+    margin: 1rem;
+    font-size: 1.6rem;
+}
+#viewevent p{
+    margin-bottom:2rem;
+    font-size: 1.6rem;
+}
+#btn-delete{
+    color: white;
+    background-color: #ff3838;
+    font-size: 1.6rem;
+}
+@media (max-width:660px) {
+    html{
+        font-size: 6px;
+    }
+}
+@media (max-width:575px) {
+    html{
+        font-size: 4px;
+    }
+}
+
+.error{
+    border:1px solid #EA2027 !important;
+    animation: shake 0.2s ease-in-out 0s 2 !important;
+}
+
+@keyframes shake {
+    0%{
+        margin-left: 0rem;
+    }
+    25%{
+        margin-left: 0.5rem;
+    }
+    75%{
+        margin-left: -0.5rem;
+    }
+    100%{
+        margin-left: 0rem;
+    }
+}
